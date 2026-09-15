@@ -19,7 +19,7 @@ The installer updates application files; it does not intentionally delete vaults
 
 ## Older installers
 
-Previous installers are retained, but installing an older version is not an automatic database rollback. An older application may not understand data written by a newer version. Back up both your vault and Phasoric application data, and follow the compatibility guidance in the release notes before downgrading. Prefer a documented recovery release.
+Withdrawn installers are removed from public downloads. Use the current release or a recovery release identified in its notes. Installing an older version is not an automatic database rollback; it may not understand newer application data. A withdrawn release already installed on your computer can still update normally.
 
 ## An update is unavailable or fails to download
 
