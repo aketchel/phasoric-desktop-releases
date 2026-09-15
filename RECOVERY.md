@@ -8,6 +8,10 @@
 
 The usual recovery is a newer release containing the last known-good behavior. This allows affected installations to recover through the normal authenticated update channel.
 
+## If a note-window error prevents restarting to update
+
+Preview.3 fixes the `ERR_FILE_NOT_FOUND (-6)` error when opening quick notes or sticky notes in preview.2. If that error prevents **Restart to update**, save your work in the main workspace, download the current installer, and follow its prompt to close the running app. Keep your vault and application data intact; the replacement can recover saved drafts.
+
 ## If the application cannot open
 
 1. Keep your vault folder intact. Make a backup before troubleshooting.
@@ -19,7 +23,7 @@ The installer updates application files; it does not intentionally delete vaults
 
 ## Older installers
 
-Withdrawn installers are removed from public downloads. Use the current release or a recovery release identified in its notes. Installing an older version is not an automatic database rollback; it may not understand newer application data. A withdrawn release already installed on your computer can still update normally.
+Withdrawn installers are removed from public downloads. Use the current release or a recovery release identified in its notes. Installing an older version is not an automatic database rollback; it may not understand newer application data. Removing an old download does not disable its update channel.
 
 ## An update is unavailable or fails to download
 
