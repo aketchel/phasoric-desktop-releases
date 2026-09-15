@@ -8,8 +8,8 @@ This repository distributes Windows preview installers, release notes, and authe
 
 ## Download and install
 
-- [Download Windows preview 1.0.0-preview.3 (x64)](https://github.com/aketchel/phasoric-desktop-releases/releases/download/v1.0.0-preview.3/Phasoric-1.0.0-preview.3-win-x64.exe)
-- [Read the release notes](https://github.com/aketchel/phasoric-desktop-releases/releases/tag/v1.0.0-preview.3)
+- [Download Windows preview 1.0.0-preview.4 (x64)](https://github.com/aketchel/phasoric-desktop-releases/releases/download/v1.0.0-preview.4/Phasoric-1.0.0-preview.4-win-x64.exe)
+- [Read the release notes](https://github.com/aketchel/phasoric-desktop-releases/releases/tag/v1.0.0-preview.4)
 - [Browse all releases](https://github.com/aketchel/phasoric-desktop-releases/releases)
 
 1. Download the Windows x64 installer from the release page above.
@@ -52,6 +52,12 @@ Review the upload/download preview, then confirm to enable bidirectional Markdow
 
 This preview requires the updated Phasoric sync service. Until it is available for your account, the app explains that a server update is needed and you can continue working locally. Attachments, Obsidian configuration, encrypted notes, and deletion propagation are excluded. Notes changed on both sides require conflict review. Files larger than 4 MB and unsupported paths are shown as excluded; oversized provider inventories stop before transfer. Provider connections and their credentials remain managed by Phasoric's server.
 
+## Sign-in and recovery
+
+On the desktop sign-in screen, choose **Sign in with your browser** to use your default browser and its password manager. Compare the code shown in the browser with the desktop, verify the account, and confirm. Phasoric does not import your browser profile or saved passwords. You can also sign in directly in Phasoric or continue with a local vault.
+
+The app checks its session when you return, reconnect, or wake the device. If sign-in has expired, it shows a recovery message. A display failure offers a reload action; save any available edits before choosing to reload.
+
 ## Automatic updates
 
 The Windows preview checks for updates in the background and downloads an eligible update automatically. Use **Phasoric → Check for updates** to check immediately. When an update is ready, choose **Restart to update**.
@@ -67,7 +73,7 @@ Preview updates can be released gradually or paused. The [download page](https:/
 Each release includes `SHA256SUMS.txt`. In PowerShell, calculate the downloaded installer's checksum:
 
 ```powershell
-Get-FileHash -Algorithm SHA256 -LiteralPath '.\Phasoric-1.0.0-preview.3-win-x64.exe'
+Get-FileHash -Algorithm SHA256 -LiteralPath '.\Phasoric-1.0.0-preview.4-win-x64.exe'
 ```
 
 Compare the result with the matching entry in `SHA256SUMS.txt` from the same release. A checksum detects changed or incomplete downloads; obtain both files from this repository.
