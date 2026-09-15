@@ -8,8 +8,8 @@ This repository distributes Windows preview installers, release notes, and authe
 
 ## Download and install
 
-- [Download Windows preview 1.0.0-preview.2 (x64)](https://github.com/aketchel/phasoric-desktop-releases/releases/download/v1.0.0-preview.2/Phasoric-1.0.0-preview.2-win-x64.exe)
-- [Read the release notes](https://github.com/aketchel/phasoric-desktop-releases/releases/tag/v1.0.0-preview.2)
+- [Download Windows preview 1.0.0-preview.3 (x64)](https://github.com/aketchel/phasoric-desktop-releases/releases/download/v1.0.0-preview.3/Phasoric-1.0.0-preview.3-win-x64.exe)
+- [Read the release notes](https://github.com/aketchel/phasoric-desktop-releases/releases/tag/v1.0.0-preview.3)
 - [Browse all releases](https://github.com/aketchel/phasoric-desktop-releases/releases)
 
 1. Download the Windows x64 installer from the release page above.
@@ -67,7 +67,7 @@ Preview updates can be released gradually or paused. The [download page](https:/
 Each release includes `SHA256SUMS.txt`. In PowerShell, calculate the downloaded installer's checksum:
 
 ```powershell
-Get-FileHash -Algorithm SHA256 -LiteralPath '.\Phasoric-1.0.0-preview.2-win-x64.exe'
+Get-FileHash -Algorithm SHA256 -LiteralPath '.\Phasoric-1.0.0-preview.3-win-x64.exe'
 ```
 
 Compare the result with the matching entry in `SHA256SUMS.txt` from the same release. A checksum detects changed or incomplete downloads; obtain both files from this repository.
