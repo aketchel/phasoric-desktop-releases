@@ -8,8 +8,8 @@ This repository distributes Windows preview installers, release notes, and authe
 
 ## Download and install
 
-- [Download Windows preview 1.0.0-preview.4 (x64)](https://github.com/aketchel/phasoric-desktop-releases/releases/download/v1.0.0-preview.4/Phasoric-1.0.0-preview.4-win-x64.exe)
-- [Read the release notes](https://github.com/aketchel/phasoric-desktop-releases/releases/tag/v1.0.0-preview.4)
+- [Download Windows preview 1.0.0-preview.6 (x64)](https://github.com/aketchel/phasoric-desktop-releases/releases/download/v1.0.0-preview.6/Phasoric-1.0.0-preview.6-win-x64.exe)
+- [Read the release notes](https://github.com/aketchel/phasoric-desktop-releases/releases/tag/v1.0.0-preview.6)
 - [Browse all releases](https://github.com/aketchel/phasoric-desktop-releases/releases)
 
 1. Download the Windows x64 installer from the release page above.
@@ -38,7 +38,7 @@ Web, mobile, and desktop use the same core Phasoric workspace. Desktop adds the 
 - **Local MCP and agents:** explicitly enable access to the active vault; review supported file-change proposals in Forge before they execute.
 - **Native workflows:** attachments, vault links, optional tray operation, and approval notifications.
 - **Quick capture:** right-click the Phasoric taskbar icon or tray icon and choose **New quick note**. Use **Ctrl+Alt+N** from another application, or **Ctrl+Shift+N** inside Phasoric. The global shortcut can be disabled in the tray menu.
-- **Sticky notes:** create a sticky from the tray or File menu, or use **Open as sticky note** in a vault note's actions. Keep it above other windows, edit it, and open its source in Phasoric. Saved stickies remain ordinary Markdown notes; conflicting edits are kept for review.
+- **Sticky notes:** create a sticky from the tray or File menu, or use **Open as sticky note** in a vault note's actions. Use its compact yellow paper window and draggable header, keep it above other windows, edit it, and open its source in Phasoric. Blank new notes are discarded when closed; saved notes and drafts with content are preserved. Saved stickies remain ordinary Markdown notes; conflicting edits are kept for review.
 - **Portable properties:** assign a type, tags, project, status, priority, due date, owner, and area in a sticky's **Properties** panel. These properties stay in Markdown and travel with the note through any configured sync provider. Use the **Sticky notes** Pulse lens or Perspective to review notes marked `type: sticky-note`.
 - **Capture from other apps:** copy text, then choose **Capture clipboard** from Phasoric's File or tray menu, or **Paste clipboard** in a quick note. Chrome clipper 2.0.1 adds **Copy for Desktop** with source and capture properties; paste it into Phasoric and choose its vault. Clipboard access happens only when you request it.
 - **Quick vault switching:** use the vault switcher or **Ctrl+Alt+V**, type a vault name, and press Enter when one match remains. Pending saves finish before switching.
@@ -64,6 +64,8 @@ The Windows preview checks for updates in the background and downloads an eligib
 
 Save your work, resolve any pending drafts, and use **Open another folder** to return to the desktop folder picker before restarting. If Phasoric cannot safely close the workspace, it leaves the application open so you can resolve the pending work. An update never silently restarts an active session.
 
+If you run an installer manually and setup asks you to close Phasoric, save your work and choose **Quit Phasoric** from the tray menu, then retry setup. Closing only the workspace window can leave background indexing or sticky notes running. See [Recovery](RECOVERY.md) if the message persists.
+
 Update metadata is authenticated using a Phasoric release key embedded in the application. The downloaded installer is checked against that metadata before installation. Update checks do not send vault content. GitHub receives ordinary download requests and their associated network metadata.
 
 Preview updates can be released gradually or paused. The [download page](https://phasoric.com/apps/desktop) selects the current published installer from this repository. Withdrawn releases are removed from public downloads; already installed copies can still receive the replacement through the update channel. See [Recovery](RECOVERY.md) if an update causes a problem.
@@ -73,7 +75,7 @@ Preview updates can be released gradually or paused. The [download page](https:/
 Each release includes `SHA256SUMS.txt`. In PowerShell, calculate the downloaded installer's checksum:
 
 ```powershell
-Get-FileHash -Algorithm SHA256 -LiteralPath '.\Phasoric-1.0.0-preview.4-win-x64.exe'
+Get-FileHash -Algorithm SHA256 -LiteralPath '.\Phasoric-1.0.0-preview.6-win-x64.exe'
 ```
 
 Compare the result with the matching entry in `SHA256SUMS.txt` from the same release. A checksum detects changed or incomplete downloads; obtain both files from this repository.
