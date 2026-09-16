@@ -12,6 +12,12 @@ The usual recovery is a newer release containing the last known-good behavior. T
 
 Preview.3 fixes the `ERR_FILE_NOT_FOUND (-6)` error when opening quick notes or sticky notes in preview.2. If that error prevents **Restart to update**, save your work in the main workspace, download the current installer, and follow its prompt to close the running app. Keep your vault and application data intact; the replacement can recover saved drafts.
 
+## If setup keeps asking to close Phasoric
+
+Save your notes, then right-click the Phasoric tray icon and choose **Quit Phasoric**. Closing the workspace window can leave Phasoric running for background indexing or sticky notes. Return to the installer and choose **Retry** after the app exits. Use the same installation folder and Windows account as the existing installation.
+
+If the message persists after quitting, cancel setup and report the installed version, installation folder, and exact message. Keep the existing application data and vault intact; uninstalling or deleting the profile is not the normal update procedure.
+
 ## If the application cannot open
 
 1. Keep your vault folder intact. Make a backup before troubleshooting.
